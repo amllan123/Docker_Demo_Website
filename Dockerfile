@@ -29,7 +29,7 @@ FROM node:14
 
 WORKDIR /app
 
-COPY --from=build /app/client/build /app/client/build
+COPY --from=build /app/client/dist /app/client/build
 COPY --from=0 /app/server /app/server
 
 EXPOSE 3001
